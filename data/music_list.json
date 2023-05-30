@@ -22,5 +22,11 @@
     "publish_date": "2022-10-10",
     "sportify": true,
     "genre_id": "Country"
+  },
+  {
+    "id": "d7bb1436-b635-4d2d-921d-011a34511b2b",
+    "publish_date": "2020-05-12",
+    "sportify": true,
+    "genre_id": "MOTOTO"
   }
 ]
