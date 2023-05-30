@@ -21,3 +21,12 @@ class Main
     9 - List all authors
     10 - Exit "
 end
+
+def prompt
+    menu
+    choice = gets.chomp.to_i
+    options(choice)
+    prompt until @choice == 10
+  end
+  
+end
