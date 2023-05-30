@@ -6,4 +6,8 @@ class Music < Item
     super(publish_date)
     @on_sportify = on_sportify
   end
+
+  def can_be_archived?
+    super && @on_sportify = true
+  end
 end
