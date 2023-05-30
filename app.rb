@@ -3,13 +3,16 @@ require_relative './classes/genre'
 require_relative './classes/music'
 
 class Application
-  attr_reader :genres, :music_albums
+  attr_reader :books, :games, :music_albums, :genres, :labels, :authors
 
   def initialize
-    @genres = []
+    @books = []
+    @games = []
     @music_albums = []
+    @genres = []
+    @labels = []
+    @authors = []
   end
-
   # Genre part
 
   def add_genre(item)
