@@ -36,4 +36,16 @@ class Application
       puts "Genre: #{genre.id} - #{genre['name']}"
     end
   end
+
+  # Music part
+
+  def add_music_album
+    print "Is the music on sportify? (Y/N): "
+    sportify_value = gets.chomp.downcase == 'y'
+    print "Enter publish date (YYYY-MM-DD): "
+    publish_date = gets.chomp
+    music_album = Music.new(publish_date, sportify_value)
+    add_genre(music)
+    puts "Music album added!"
+    store_music_album(music)
 end
