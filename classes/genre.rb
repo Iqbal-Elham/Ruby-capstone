@@ -2,11 +2,16 @@ require 'securerandom'
 
 class Genre
   attr_accessor :name, :items
-attr_reader :id
+  attr_reader :id
 
   def initialize(name)
+    @id = id || SecureRandom.uuid
     @name = name
-    @id = SecureRandom.uuid
-    @items = []
+    @item = []
+  end
+
+  def add_item(item)
+    @item << item
+    item.genre = self
   end
 end
