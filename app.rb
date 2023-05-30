@@ -49,4 +49,16 @@ class Application
     puts "Music album added!"
     store_music_album(music)
     music
+  end
+
+  def store_music(music)
+    new_music = { id: music.id, publish_date: music.publish_date, sportify: music.on_sportify, genre_id: music.genre.name }
+    if File.exist?('./data/music_list.json')
+      file = File.size('./data/music_list.json').zero? ? [] : JSON.parse(File.read('./data/music_list.json'))
+      file.push(new_music)
+      File.write('./data/music_list.json', JSON.pretty_generate(file))
+    else
+      File.write('./data/music_list.json', JSON.pretty_generate([new_music]))
+    end
+  end
 end
