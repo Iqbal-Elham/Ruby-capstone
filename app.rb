@@ -61,4 +61,12 @@ class Application
       File.write('./data/music_list.json', JSON.pretty_generate([new_music]))
     end
   end
+
+    def list_all_music_albums
+    puts "Music album's list"
+    musics = File.size('./data/music_list.json').zero? ? [] : JSON.parse(File.read('./data/music_list.json'))
+    musics.each do |music|
+      puts "Published date: #{music['publish_date']}, On sportify: #{music['sportify']}, Genre: #{music['genre_id']}"
+    end
+  end
 end
