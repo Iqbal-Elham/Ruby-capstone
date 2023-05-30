@@ -2,7 +2,7 @@ require 'securerandom'
 
 class Genre
   attr_accessor :name, :items
-  att_reader :id
+attr_reader :id
 
   def initialize(name)
     @name = name
