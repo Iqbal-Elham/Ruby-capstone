@@ -5,9 +5,9 @@ class Main
     @app = Application.new
   end
 
-  def manu
+  def menu
     $stdout.sync = true
-    puts 'Catalogue of my many things console Application'
+    puts 'Welcome to the Catalog of many things console application'
     puts "
     Please choose an option from the list by entering a number:\n
     1 - List all books
@@ -20,9 +20,9 @@ class Main
     8 - List all labels
     9 - List all authors
     10 - Exit "
-end
+  end
 
-def prompt
+  def prompt
     menu
     choice = gets.chomp.to_i
     options(choice)
