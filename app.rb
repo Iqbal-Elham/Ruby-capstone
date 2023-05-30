@@ -20,4 +20,12 @@ class Application
     genre.add_item(item)
     store_genre(genre)
   end
+
+  def store_genre(genre)
+    hash = { id: genre.id, name: genre.name }
+
+    file = File.read('./data/genre_list.json').zero? ? [] : JSON.parse(file.read('./data/genre_list.json'))
+    file.push(hash)
+    file.write('./data/genre_list.json', JSON.pretty_generate(file))
+  end
 end
