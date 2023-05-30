@@ -1,0 +1,26 @@
+[
+  {
+    "id": "c6d7dc58-8a25-4683-bf69-e608f20a23e8",
+    "publish_date": "2022-10-15",
+    "sportify": true,
+    "genre_id": "Gospel"
+  },
+  {
+    "id": "b7f37eef-a51b-43a6-86a1-907a5635afab",
+    "publish_date": "2022-10-11",
+    "sportify": true,
+    "genre_id": "Apala"
+  },
+  {
+    "id": "bcbb7cb2-1057-4cbd-a02c-9de579ad18db",
+    "publish_date": "2021-11-11",
+    "sportify": true,
+    "genre_id": "Westlife"
+  },
+  {
+    "id": "69ab455c-a3b2-4ff6-b911-e20480a49a04",
+    "publish_date": "2022-10-10",
+    "sportify": true,
+    "genre_id": "Country"
+  }
+]
