@@ -10,8 +10,5 @@ class Genre
     @item = []
   end
 
-  def add_item(item)
-    @item << item
-    item.genre = self
-  end
+  
 end
