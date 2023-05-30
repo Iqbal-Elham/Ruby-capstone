@@ -28,5 +28,20 @@ def prompt
     options(choice)
     prompt until @choice == 10
   end
-  
+
+  def options(choice)
+    case choice
+    when 5
+      @app.add_music_album
+    when 6
+      @app.list_all_music_albums
+    when 7
+      @app.list_all_genres
+    else
+      exit
+    end
+  end
 end
+
+app = Main.new
+app.prompt
