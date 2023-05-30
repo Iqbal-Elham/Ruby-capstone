@@ -48,4 +48,5 @@ class Application
     add_genre(music)
     puts "Music album added!"
     store_music_album(music)
+    music
 end
