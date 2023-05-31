@@ -31,12 +31,18 @@ class Main
 
   def options(choice)
     case choice
+    when 1
+      @app.list_all_books
+    when 2
+      @app.add_book
     when 5
       @app.add_music_album
     when 6
       @app.list_all_music_albums
     when 7
       @app.list_all_genres
+    when 8
+      @app.list_all_labels
     else
       exit
     end
