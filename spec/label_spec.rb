@@ -33,6 +33,4 @@ describe Label do
       expect(item.label).to be(label)
     end
   end
-
-
 end
