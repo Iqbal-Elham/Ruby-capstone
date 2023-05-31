@@ -150,7 +150,7 @@ class Application
     end
   end
 
-  #Game part
+  # Game part
   def add_game
     print 'Is the game a multiplayer: '
     multiplayer = gets.chomp.downcase == 'y'
@@ -178,14 +178,14 @@ class Application
   end
 
   def list_all_games
-    puts "Games list"
-    games = File.exists?('./data/game_list.json') ? JSON.parse(File.read('./data/game_list.json')) : []
+    puts 'Games list'
+    games = File.exist?('./data/game_list.json') ? JSON.parse(File.read('./data/game_list.json')) : []
     games.each do |game|
       puts "Last played on: #{game['last_played']}, Multiplayer: #{game['multiplayer']}, Id: #{game['id']}"
     end
   end
 
-  #Author part
+  # Author part
   def add_author
     print 'Author\'s first name: '
     firstname = gets.chomp.capitalize!
@@ -212,8 +212,8 @@ class Application
   end
 
   def list_all_authors
-    puts "Authors list"
-    authors = File.exists?('./data/author_list.json') ? JSON.parse(File.read('./data/author_list.json')) : []
+    puts 'Authors list'
+    authors = File.exist?('./data/author_list.json') ? JSON.parse(File.read('./data/author_list.json')) : []
     authors.each do |author|
       puts "First name: #{author['firstname']}, Last name: #{author['lastname']}}"
     end
