@@ -1,4 +1,6 @@
 require 'securerandom'
+require 'date'
+
 class Item
   attr_accessor :genre, :author, :label, :publish_date
   attr_reader :id, :archived
@@ -22,6 +24,6 @@ class Item
 
   def can_be_archived?
     # return true if publish_date is older than 10 years
-    return true if @publish_date < Date.today - 3650
+    Date.today.year - Date.parse(@publish_date).year > 10
   end
 end
