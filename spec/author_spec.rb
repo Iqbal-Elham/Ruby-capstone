@@ -10,10 +10,10 @@ describe Author do
   end
 
   it 'author has a firstname' do
-    expect(@author.first_name).to eq "John"
+    expect(@author.first_name).to eq 'John'
   end
 
   it 'author has a lastname' do
-    expect(@author.last_name).to eq "Doe"
+    expect(@author.last_name).to eq 'Doe'
   end
 end
