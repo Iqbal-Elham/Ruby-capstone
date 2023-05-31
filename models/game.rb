@@ -12,7 +12,7 @@ class Game < Item
   end
 
   def can_be_archived?
-    super.can_be_archived? == 5 && is_greater_tnan?(@last_played_at)
+    super && is_greater_tnan?(@last_played_at)
   end
 
   def greater_tnan?(date)
