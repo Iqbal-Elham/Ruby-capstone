@@ -6,7 +6,7 @@ class Game < Item
   attr_reader :last_played_at
 
   def initialize(multiplayer, last_played)
-    super
+    super(last_played)
     @multiplayer = multiplayer
     @last_played_at = last_played
   end
