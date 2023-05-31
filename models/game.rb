@@ -6,13 +6,13 @@ class Game < Item
   attr_reader :last_played_at
 
   def initialize(multiplayer, last_played)
-    super()
+    super
     @multiplayer = multiplayer
     @last_played_at = last_played
   end
 
   def can_be_archived?
-    super && is_greater_tnan?(@last_played_at)
+    super && greater_tnan?(@last_played_at)
   end
 
   def greater_tnan?(date)
@@ -21,6 +21,6 @@ class Game < Item
     month = date_now.mon
     day = date_now.day
 
-    (year - date.year) > 2 && month >= date.month && day >= date.year
+    (year - date.year) >= 2 && month <= date.month && day <= date.year
   end
 end

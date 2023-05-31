@@ -9,7 +9,7 @@ class Item
   end
 
   def can_be_archived?
-    is_greater_tnan?(@publish_date)
+    greater_tnan?(@publish_date)
   end
 
   def move_to_archive
@@ -22,6 +22,6 @@ class Item
     month = date_now.mon
     day = date_now.day
 
-    (year - date.year) > 10 && month >= date.month && day >= date.year
+    (year - date.year) >= 10 && month <= date.month && day <= date.year
   end
 end
