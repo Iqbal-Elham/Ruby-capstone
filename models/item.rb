@@ -1,7 +1,7 @@
 class Item
   attr_reader :author, :id, :label, :publish_date
 
-  def initialize(label, publish_date)
+  def initialize(label = '', publish_date = nil)
     @id = Random.rand(1..1000)
     @label = label
     @publish_date = publish_date
