@@ -1,6 +1,8 @@
 require 'json'
 require_relative './classes/genre'
 require_relative './classes/music'
+require_relative './classes/book'
+require_relative './classes/label'
 
 class Application
   attr_reader :books, :games, :music_albums, :genres, :labels, :authors
@@ -12,6 +14,74 @@ class Application
     @genres = []
     @labels = []
     @authors = []
+  end
+  # Book part
+
+  def add_label(item)
+    print 'Enter book title: '
+    title = gets.chomp
+    print 'Enter color of the book: '
+    color = gets.chomp
+
+    label = Label.new(title, color)
+    label.add_item(item)
+    store_label(label)
+  end
+
+  def store_label(label)
+    hash = { id: label.id, title: label.title, color: label.color }
+
+    file = File.empty?('./data/label_list.json') ? [] : JSON.parse(File.read('./data/label_list.json'))
+    file << hash
+    File.write('./data/label_list.json', JSON.pretty_generate(file))
+  end
+
+  def list_all_labels
+    puts 'List of all labels:'
+    file = File.empty?('./data/label_list.json') ? [] : JSON.parse(File.read('./data/label_list.json'))
+    file.each do |label|
+      puts "Label ID: #{label['id']}, Title: #{label['title']}, Color: #{label['color']}"
+    end
+  end
+
+  # Book part
+
+  def add_book
+    print 'Enter the publisher name: '
+    publisher = gets.chomp
+    print 'Enter publish date (YYYY-MM-DD): '
+    publish_date = gets.chomp
+    print 'Enter the cover state: '
+    cover_state = gets.chomp
+    book = Book.new(publish_date, cover_state, publisher)
+    add_label(book)
+    puts 'Book added!'
+    store_book(book)
+    book
+  end
+
+  def store_book(book)
+    new_book = {
+      id: book.id,
+      publish_date: book.publish_date,
+      publisher: book.publisher,
+      label_id: book.label.title
+    }
+    if File.exist?('./data/book_list.json')
+      file = File.empty?('./data/book_list.json') ? [] : JSON.parse(File.read('./data/book_list.json'))
+      file << new_book
+      File.write('./data/book_list.json', JSON.pretty_generate(file))
+    else
+      File.write('./data/book_list.json', JSON.pretty_generate([new_book]))
+    end
+  end
+
+  def list_all_books
+    puts "Book list"
+    books = File.empty?('./data/book_list.json') ? [] : JSON.parse(File.read('./data/book_list.json'))
+    books.each do |book|
+      puts "Published date: #{book['publish_date']}, Publisher: #{book['publisher']}, label: #{book['label_id']}"
+    end
   end
   # Genre part
 
