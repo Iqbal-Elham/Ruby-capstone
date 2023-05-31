@@ -35,6 +35,10 @@ class Main
       @app.list_all_books
     when 2
       @app.add_book
+    when 3
+      @app.list_all_games
+    when 4
+      @app.add_game
     when 5
       @app.add_music_album
     when 6
@@ -43,6 +47,8 @@ class Main
       @app.list_all_genres
     when 8
       @app.list_all_labels
+    when 9
+      @app.list_all_authors
     else
       exit
     end
