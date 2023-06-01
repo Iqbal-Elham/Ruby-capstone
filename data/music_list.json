@@ -28,5 +28,23 @@
     "publish_date": "2020-05-12",
     "sportify": true,
     "genre_id": "MOTOTO"
+  },
+  {
+    "id": "bcc35272-904d-495e-904e-57bedfeb9a77",
+    "publish_date": "2020-12-21",
+    "sportify": true,
+    "genre_id": "blues"
+  },
+  {
+    "id": "48a42ef1-19ce-4d15-89e5-d2a83216e1b0",
+    "publish_date": "2020-2-3",
+    "sportify": true,
+    "genre_id": "funk"
+  },
+  {
+    "id": "f3594d73-7c77-4f9f-b2f3-5e6b3bfbaecb",
+    "publish_date": "2023-12-3",
+    "sportify": true,
+    "genre_id": "funky"
   }
 ]
