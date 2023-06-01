@@ -1,4 +1,5 @@
 require_relative 'item'
+
 class Music < Item
   attr_reader :on_sportify
 
@@ -8,6 +9,6 @@ class Music < Item
   end
 
   def can_be_archived?
-    super && @on_sportify = true
+    super || @on_sportify
   end
 end

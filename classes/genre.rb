@@ -7,11 +7,11 @@ class Genre
   def initialize(name)
     @id = id || SecureRandom.uuid
     @name = name
-    @item = []
+    @items = []
   end
 
   def add_item(item)
-    @item << item
+    @items << item
     item.genre = self
   end
 end

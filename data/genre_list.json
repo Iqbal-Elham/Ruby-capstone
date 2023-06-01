@@ -20,11 +20,19 @@
     "name": "MOTOTO"
   },
   {
-    "id": "c4c1a6c7-d189-44c2-9c8b-5f9a419aece7",
-    "name": "rock"
+    "id": "2e8e04bf-e289-4852-ac4d-cd2d15435eb6",
+    "name": "blues"
   },
   {
-    "id": "ab0fcd29-b494-4ba5-8923-bd0a9eaaa7e7",
-    "name": "Rock"
+    "id": "5380f63a-f995-4029-abf7-a223911f8306",
+    "name": "funk"
+  },
+  {
+    "id": "8397fdf1-8ced-45d7-9899-888bdef5e2ca",
+    "name": "funky"
+  },
+  {
+    "id": "59e55e1e-ae2d-4570-992e-49667c83acb4",
+    "name": ""
   }
 ]
