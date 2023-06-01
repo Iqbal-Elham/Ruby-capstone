@@ -46,5 +46,11 @@
     "publish_date": "2023-12-3",
     "sportify": true,
     "genre_id": "funky"
+  },
+  {
+    "id": "7c100203-6f84-44fb-9f71-7ca463cfc356",
+    "publish_date": "",
+    "sportify": false,
+    "genre_id": ""
   }
 ]
