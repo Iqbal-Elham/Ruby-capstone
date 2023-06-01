@@ -39,7 +39,7 @@ class Main
       '4' => :add_game,
       '5' => :add_music_album,
       '6' => :list_all_music_albums,
-      '7' => :list_all_labels,
+      '7' => :list_all_genres,
       '8' => :list_all_labels,
       '9' => :list_all_authors,
       '10' => :add_author
@@ -49,8 +49,8 @@ class Main
   def options(choice)
     if choice == '11'
       exit
-    elsif get_dictionary[choice]
-      @app.send(get_dictionary[choice])
+    elsif dictionary[choice]
+      @app.send(dictionary[choice])
     else
       print 'Please enter a valid option: '
       valid_option = gets.chomp
