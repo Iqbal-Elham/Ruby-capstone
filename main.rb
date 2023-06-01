@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require './app'
 
 class Main
@@ -19,18 +20,19 @@ class Main
     7 - List all genres
     8 - List all labels
     9 - List all authors
-    10 - Exit "
+    10 - Add author
+    11 - exit "
   end
 
   def prompt
     menu
     choice = gets.chomp
     options(choice)
-    prompt until @choice == 10
+    prompt until @choice == 11
   end
 
-  def options(_choice)
-    dictionary = {
+  def dictionary
+    {
       '1' => :list_all_books,
       '2' => :add_book,
       '3' => :list_all_games,
@@ -39,17 +41,20 @@ class Main
       '6' => :list_all_music_albums,
       '7' => :list_all_labels,
       '8' => :list_all_labels,
-      '9' => :list_all_authors
+      '9' => :list_all_authors,
+      '10' => :add_author
     }
+  end
 
-    if choice == '10'
+  def options(choice)
+    if choice == '11'
       exit
-    elsif dictionary[choice]
-      @app.send(dictionary[choice])
+    elsif get_dictionary[choice]
+      @app.send(get_dictionary[choice])
     else
       print 'Please enter a valid option: '
       valid_option = gets.chomp
-      run_option(valid_option)
+      options(valid_option)
     end
   end
 end

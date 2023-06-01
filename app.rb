@@ -188,12 +188,12 @@ class Application
   # Author part
   def add_author
     print 'Author\'s first name: '
-    firstname = gets.chomp.capitalize!
+    firstname = gets.chomp
     print 'Author\'s last name: '
-    lastname = gets.chomp.capitalize!
+    lastname = gets.chomp
     author = Author.new(firstname, lastname)
     @authors << author
-    store_game(author)
+    store_author(author)
     puts 'Author added!'
   end
 
@@ -215,7 +215,7 @@ class Application
     puts 'Authors list'
     authors = File.exist?('./data/author_list.json') ? JSON.parse(File.read('./data/author_list.json')) : []
     authors.each do |author|
-      puts "First name: #{author['firstname']}, Last name: #{author['lastname']}}"
+      puts "First name: #{author['firstname']}, Last name: #{author['lastname']}"
     end
   end
 end
