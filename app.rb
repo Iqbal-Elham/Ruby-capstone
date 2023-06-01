@@ -3,6 +3,8 @@ require_relative './classes/genre'
 require_relative './classes/music'
 require_relative './classes/book'
 require_relative './classes/label'
+require_relative './classes/game'
+require_relative './classes/author'
 
 class Application
   attr_reader :books, :games, :music_albums, :genres, :labels, :authors
@@ -145,6 +147,75 @@ class Application
     musics = File.empty?('./data/music_list.json') ? [] : JSON.parse(File.read('./data/music_list.json'))
     musics.each do |music|
       puts "Published date: #{music['publish_date']}, On sportify: #{music['sportify']}, Genre: #{music['genre_id']}"
+    end
+  end
+
+  # Game part
+  def add_game
+    print 'Is the game a multiplayer: '
+    multiplayer = gets.chomp.downcase == 'y'
+    print 'Enter the day the game was last played (YYYY-MM-DD): '
+    last_played_date = gets.chomp
+    game = Game.new(multiplayer, last_played_date)
+    store_game(game)
+    @games << game
+    puts 'Game added!'
+  end
+
+  def store_game(game)
+    serialized_game = {
+      id: game.id,
+      last_played: game.last_played_at,
+      multiplayer: game.multiplayer
+    }
+    if File.exist?('./data/game_list.json')
+      file = File.empty?('./data/game_list.json') ? [] : JSON.parse(File.read('./data/game_list.json'))
+      file.push(serialized_game)
+      File.write('./data/game_list.json', JSON.pretty_generate(file))
+    else
+      File.write('./data/game_list.json', JSON.pretty_generate([serialized_game]))
+    end
+  end
+
+  def list_all_games
+    puts 'Games list'
+    games = File.exist?('./data/game_list.json') ? JSON.parse(File.read('./data/game_list.json')) : []
+    games.each do |game|
+      puts "Last played on: #{game['last_played']}, Multiplayer: #{game['multiplayer']}, Id: #{game['id']}"
+    end
+  end
+
+  # Author part
+  def add_author
+    print 'Author\'s first name: '
+    firstname = gets.chomp.capitalize!
+    print 'Author\'s last name: '
+    lastname = gets.chomp.capitalize!
+    author = Author.new(firstname, lastname)
+    @authors << author
+    store_game(author)
+    puts 'Author added!'
+  end
+
+  def store_author(author)
+    serialized_author = {
+      lastname: author.last_name,
+      firstname: author.first_name
+    }
+    if File.exist?('./data/author_list.json')
+      file = File.empty?('./data/author_list.json') ? [] : JSON.parse(File.read('./data/author_list.json'))
+      file.push(serialized_author)
+      File.write('./data/author_list.json', JSON.pretty_generate(file))
+    else
+      File.write('./data/author_list.json', JSON.pretty_generate([serialized_author]))
+    end
+  end
+
+  def list_all_authors
+    puts 'Authors list'
+    authors = File.exist?('./data/author_list.json') ? JSON.parse(File.read('./data/author_list.json')) : []
+    authors.each do |author|
+      puts "First name: #{author['firstname']}, Last name: #{author['lastname']}}"
     end
   end
 end

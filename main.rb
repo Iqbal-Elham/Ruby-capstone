@@ -24,27 +24,32 @@ class Main
 
   def prompt
     menu
-    choice = gets.chomp.to_i
+    choice = gets.chomp
     options(choice)
     prompt until @choice == 10
   end
 
-  def options(choice)
-    case choice
-    when 1
-      @app.list_all_books
-    when 2
-      @app.add_book
-    when 5
-      @app.add_music_album
-    when 6
-      @app.list_all_music_albums
-    when 7
-      @app.list_all_genres
-    when 8
-      @app.list_all_labels
-    else
+  def options(_choice)
+    dictionary = {
+      '1' => :list_all_books,
+      '2' => :add_book,
+      '3' => :list_all_games,
+      '4' => :add_game,
+      '5' => :add_music_album,
+      '6' => :list_all_music_albums,
+      '7' => :list_all_labels,
+      '8' => :list_all_labels,
+      '9' => :list_all_authors
+    }
+
+    if choice == '10'
       exit
+    elsif dictionary[choice]
+      @app.send(dictionary[choice])
+    else
+      print 'Please enter a valid option: '
+      valid_option = gets.chomp
+      run_option(valid_option)
     end
   end
 end
