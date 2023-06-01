@@ -10,7 +10,6 @@
 
 </div>
 
-<!-- TABLE OF CONTENTS -->
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -29,7 +28,6 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 
 # 📖 Ruby Capstorne Project <a name="about-project"></a>
 
@@ -48,11 +46,9 @@
 - Rubocop linter
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- Features -->
+
 
 ### Key Features <a name="key-features"></a>
-
-<!-- > Describe between 1-3 key features of the application. -->
 
 - **Create Item class in a separate .rb file**
 - **Add All Item class properties visible in the diagram defined and set up in the constructor method**
@@ -62,11 +58,8 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- GETTING STARTED -->
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
-<!-- > Clone the repository by clicking on the 'Code' button and copy the link -->
 
 To get a local copy up and running, follow these steps.
 
@@ -104,8 +97,6 @@ Example command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
 ## 👥 Author <a name="authors"></a>
 
 👤 **Iqbal Elham**
@@ -118,20 +109,22 @@ Example command:
 - GitHub: [@simplegoose](https://github.com/simplegoose)
 - linkedIn: [@Timothy Njoroge](https://www.linkedin.com/in/timothy-njoroge-mwangi)
 
+👤 **Abraham Christopher**
+
+- GitHub: [@cabraham1](https://github.com/cabraham1)
+- linkedIn: [@Abraham Christopher](https://www.linkedin.com/in/abrahamchristopher/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-<!-- > Describe 1 - 3 features you will add to the project. -->
 
 - **Create a Book class in a separate .rb file Create a Label class with an association to the Item class (in a separate .rb file)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -141,7 +134,6 @@ Feel free to check the [issues page](https://github.com/iqbal-elham/Ruby-capston
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -149,7 +141,6 @@ Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -157,7 +148,6 @@ Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
