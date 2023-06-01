@@ -29,3 +29,16 @@ CREATE TABLE
     title VARCHAR(50) NOT NULL,
     color VARCHAR(50) NOT NULL
   );
+
+  CREATE TABLE music_album (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  item_id INT,
+  on_spotify BOOL NOT NULL,
+  FOREIGN KEY(item_id) REFERENCES item(id)
+);
+
+CREATE TABLE genre (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(20) NOT NULL,
+  PRIMARY KEY(id)
+);
