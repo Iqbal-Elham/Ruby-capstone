@@ -49,8 +49,8 @@ class Main
   def options(choice)
     if choice == '11'
       exit
-    elsif get_dictionary[choice]
-      @app.send(get_dictionary[choice])
+    elsif dictionary[choice]
+      @app.send(dictionary[choice])
     else
       print 'Please enter a valid option: '
       valid_option = gets.chomp
