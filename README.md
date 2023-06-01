@@ -16,6 +16,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Video Demo](#video-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -33,7 +34,11 @@
 
 > In this project, we created a console app that will help us to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but we also prepared a database with tables structure analogical to your program's class structure.
 
-## 🛠 Built With <a name="built-with"></a>
+  </br>
+  <div align="center"><img  src="./assets/images/catalog_of_my_things.png" alt="UML" width="800"  height="auto" /> </div>
+  </br>
+
+## 🛠Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -47,6 +52,12 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## Video Demo <a name="video-demo"></a>
+
+This video is about the description of the project. You can find by clicking the [link](https://drive.google.com/file/d/1FLxM75sPfwj-MA0j4juJInu4ronkL1Hh/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Key Features <a name="key-features"></a>
 
