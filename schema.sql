@@ -7,7 +7,8 @@ CREATE TABLE
     publish_date DATE NOT NULL,
     archived BOOLEAN,
     FOREIGN KEY (genre_id) REFERENCES genre (id),
-    FOREIGN KEY (label_id) REFERENCES label (id)
+    FOREIGN KEY (label_id) REFERENCES label (id),
+    FOREIGN KEY (author_id) REFERENCES author (id)
   );
 
 CREATE TABLE
@@ -42,3 +43,15 @@ CREATE TABLE genre (
   name VARCHAR(20) NOT NULL,
   PRIMARY KEY(id)
 );
+
+CREATE TABLE author (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  first_name VARCHAR(20),
+  last_name VARCHAR(20),
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE game (
+  multiplayer BOOLEAN,
+  last_played_at DATE,
+)

@@ -113,6 +113,11 @@ Example command:
 - GitHub: [@iqbal-elham](https://github.com/Iqbal-Elham)
 - linkedIn: [@iqbal-elham](https://www.linkedin.com/in/iqbal-elham)
 
+👤 **Timothy Njoroge**
+
+- GitHub: [@simplegoose](https://github.com/simplegoose)
+- linkedIn: [@Timothy Njoroge](https://www.linkedin.com/in/timothy-njoroge-mwangi)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
