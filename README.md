@@ -32,7 +32,7 @@
 
 # 📖 Ruby Capstorne Project <a name="about-project"></a>
 
-> In this project, we created a console app that will help us to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but we also prepared a database with tables structure analogical to your program's class structure.
+> In this project, we created a console app that will help us to keep a record of different types of things you own: books, music albums, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but we also prepared a database with tables structure analogical to your program's class structure.
 
   </br>
   <div align="center"><img  src="./assets/images/catalog_of_my_things.png" alt="UML" width="800"  height="auto" /> </div>
@@ -133,6 +133,8 @@ Example command:
 
 
 - **Create a Book class in a separate .rb file Create a Label class with an association to the Item class (in a separate .rb file)**
+- **Remove a selected book**
+- **Add genre to selected book**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
