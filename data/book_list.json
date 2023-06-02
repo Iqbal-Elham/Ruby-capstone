@@ -1,0 +1,20 @@
+[
+  {
+    "id": "aae15a16-b5bd-42a8-befc-119327e1fa8e",
+    "publish_date": "2022-01-12",
+    "publisher": "Iqbal",
+    "label_id": "the alchemist"
+  },
+  {
+    "id": "afbe769c-1ddb-4315-990a-4435197674e0",
+    "publish_date": "2019-12-12",
+    "publisher": "john",
+    "label_id": "sea"
+  },
+  {
+    "id": "bc24af33-e852-4e75-9a68-5907f9d999fc",
+    "publish_date": "2022-12-2",
+    "publisher": "musa",
+    "label_id": "ruby"
+  }
+]
