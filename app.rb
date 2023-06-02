@@ -33,14 +33,14 @@ class Application
   def store_label(label)
     hash = { id: label.id, title: label.title, color: label.color }
 
-    file = File.empty?('./data/label_list.json') ? [] : JSON.parse(File.read('./data/label_list.json'))
+    file = File.exist?('./data/label_list.json') ? JSON.parse(File.read('./data/label_list.json')) : []
     file << hash
     File.write('./data/label_list.json', JSON.pretty_generate(file))
   end
 
   def list_all_labels
     puts 'List of all labels:'
-    file = File.empty?('./data/label_list.json') ? [] : JSON.parse(File.read('./data/label_list.json'))
+    file = File.exist?('./data/label_list.json') ? JSON.parse(File.read('./data/label_list.json')) : []
     file.each do |label|
       puts "Label ID: #{label['id']}, Title: #{label['title']}, Color: #{label['color']}"
     end
@@ -70,7 +70,7 @@ class Application
       label_id: book.label.title
     }
     if File.exist?('./data/book_list.json')
-      file = File.empty?('./data/book_list.json') ? [] : JSON.parse(File.read('./data/book_list.json'))
+      file = File.exist?('./data/book_list.json') ? JSON.parse(File.read('./data/book_list.json')) : []
       file << new_book
       File.write('./data/book_list.json', JSON.pretty_generate(file))
     else
@@ -80,7 +80,7 @@ class Application
 
   def list_all_books
     puts 'Book list'
-    books = File.empty?('./data/book_list.json') ? [] : JSON.parse(File.read('./data/book_list.json'))
+    books = File.exist?('./data/book_list.json') ? JSON.parse(File.read('./data/book_list.json')) : []  
     books.each do |book|
       puts "Published date: #{book['publish_date']}, Publisher: #{book['publisher']}, label: #{book['label_id']}"
     end
@@ -99,14 +99,14 @@ class Application
   def store_genre(genre)
     hash = { id: genre.id, name: genre.name }
 
-    file = File.empty?('./data/genre_list.json') ? [] : JSON.parse(File.read('./data/genre_list.json'))
+    file = File.exist?('./data/genre_list.json') ? JSON.parse(File.read('./data/genre_list.json')) : []
     file.push(hash)
     File.write('./data/genre_list.json', JSON.pretty_generate(file))
   end
 
   def list_all_genres
     puts 'List of all genres:'
-    file = File.empty?('./data/genre_list.json') ? [] : JSON.parse(File.read('./data/genre_list.json'))
+    file = File.exist?('./data/genre_list.json') ? JSON.parse(File.read('./data/genre_list.json')) : []
     file.each do |genre|
       puts "Genre: #{genre['id']} - #{genre['name']}"
     end
@@ -134,7 +134,7 @@ class Application
       genre_id: music.genre.name
     }
     if File.exist?('./data/music_list.json')
-      file = File.empty?('./data/music_list.json') ? [] : JSON.parse(File.read('./data/music_list.json'))
+      file = File.exist?('./data/music_list.json') ? JSON.parse(File.read('./data/music_list.json')) : []
       file.push(new_music)
       File.write('./data/music_list.json', JSON.pretty_generate(file))
     else
@@ -144,7 +144,7 @@ class Application
 
   def list_all_music_albums
     puts "Music album's list"
-    musics = File.empty?('./data/music_list.json') ? [] : JSON.parse(File.read('./data/music_list.json'))
+    musics = File.exist?('./data/music_list.json') ? JSON.parse(File.read('./data/music_list.json')) : []
     musics.each do |music|
       puts "Published date: #{music['publish_date']}, On sportify: #{music['sportify']}, Genre: #{music['genre_id']}"
     end
@@ -152,7 +152,7 @@ class Application
 
   # Game part
   def add_game
-    print 'Is the game a multiplayer: '
+    print 'Is the game a multiplayer?: (Y/N) '
     multiplayer = gets.chomp.downcase == 'y'
     print 'Enter the day the game was last played (YYYY-MM-DD): '
     last_played_date = gets.chomp
@@ -169,7 +169,7 @@ class Application
       multiplayer: game.multiplayer
     }
     if File.exist?('./data/game_list.json')
-      file = File.empty?('./data/game_list.json') ? [] : JSON.parse(File.read('./data/game_list.json'))
+      file = File.exist?('./data/game_list.json') ? JSON.parse(File.read('./data/game_list.json')) : []
       file.push(serialized_game)
       File.write('./data/game_list.json', JSON.pretty_generate(file))
     else
@@ -203,7 +203,7 @@ class Application
       firstname: author.first_name
     }
     if File.exist?('./data/author_list.json')
-      file = File.empty?('./data/author_list.json') ? [] : JSON.parse(File.read('./data/author_list.json'))
+      file = File.exist?('./data/author_list.json') ? JSON.parse(File.read('./data/author_list.json')) : []
       file.push(serialized_author)
       File.write('./data/author_list.json', JSON.pretty_generate(file))
     else
