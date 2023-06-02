@@ -80,7 +80,7 @@ class Application
 
   def list_all_books
     puts 'Book list'
-    books = File.exist?('./data/book_list.json') ? JSON.parse(File.read('./data/book_list.json')) : []  
+    books = File.exist?('./data/book_list.json') ? JSON.parse(File.read('./data/book_list.json')) : []
     books.each do |book|
       puts "Published date: #{book['publish_date']}, Publisher: #{book['publisher']}, label: #{book['label_id']}"
     end
